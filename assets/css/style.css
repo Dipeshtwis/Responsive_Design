@@ -68,6 +68,7 @@ div,
   grid-template-columns: 2fr 1fr;
   height: 400px;
   width: 100%;
+  position: relative;
 }
 
 .big-news,
@@ -77,18 +78,68 @@ div,
  background-repeat: no-repeat;
   background-size: cover;
   }
+
 .big-news {
   grid-row: 1/3;
   background-image:linear-gradient(to right bottom,rgba(235, 76, 59, 0.9), rgba(20, 19, 33, 0.5)), url("../img/api-dev-code.png");
 }
 
+.brand {
+	width: 510px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+.big-news span {
+  float: right;
+  padding: 20px;
+}
+
+.pic-detail {
+	width: 60%;
+	position: absolute;
+	left: 20px;
+	bottom: 10px
+}
+
+.pic-detail .para {
+	font-size: 52px;
+}
+.para {
+	font-weight: bold;
+	color: white;
+	width: 100%;
+}
+
+.lower-para {
+	padding: 15px;
+	font-size: 18px;
+	color: white;
+}
+
 .small-news-1 {
   background-image :url("../img/sprint_image.jpg");
+  position: relative;
 }
 
 .small-news-2 {
 	background-image :url("../img/tree-cloud.jpg");
 	background-position: bottom;
+	position: relative;
+}
+
+.for-2 {
+	width: 80%;
+}
+.for-2 .para {
+  font-size: 24px;
+}
+
+
+.container {
+	width: 85%;
+	margin: 0 auto;
 }
 
 .Latest-news-grid {
@@ -100,9 +151,18 @@ div,
 }
 
 .latest-title {
+	float: left;
   height: 50px;
   width: auto;
+  margin: 10px auto;
 }
+
+.latest-title p {
+	font-size: 28px;
+	font-weight: bold;
+	color: red;
+}
+
 .for-three-div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -133,6 +193,9 @@ footer {
   .upper-nav-right {
     display: none;
   }
+  svg {
+  	display: none;
+  }
 }
 @media screen and (max-width: 760px) {
   .hidden-phone {
@@ -151,5 +214,8 @@ footer {
     width: 50%;
     height: 40px;
     background-color: burlywood;
+  }
+   svg {
+  	display: none;
   }
 }
