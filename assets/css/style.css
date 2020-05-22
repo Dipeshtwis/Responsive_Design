@@ -156,6 +156,47 @@ div,
   margin-bottom: 50px;
 }
 
+.aside-img {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.aside-img img {
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	width: 50px;
+	height:50px;
+}
+
+.img-head h4,
+.img-head p {
+	padding-left: 75px;
+	padding-top: 10px;
+	background-color: #ff4422;
+	font-size: 24px;
+}
+
+.img-head p {
+	padding-bottom:15px ;
+	background-color:rgba(255,68,34,.08);
+	font-weight: bold;
+}
+.onebuy ul li:last-of-type {
+	margin-bottom: 8px;
+	padding: 7px 0;
+	border-bottom: 1px solid rgba(255,68,34,.25)
+}
+
+.onebuy p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.onebuy p span {
+  color: #aaa;
+  font-size: 13px;
+}
 .latest-title {
   width: auto;
   margin: 10px auto;
@@ -228,6 +269,16 @@ footer {
   .for-three-div {
     grid-template-columns: 1fr 1fr;
   }
+  .latest-fund {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: start;
+  }
+  svg {
+    display: none;
+  }
 }
 @media screen and (max-width: 780px) {
   .upper-nav-right {
@@ -290,5 +341,13 @@ footer {
     margin-left: 0;
     padding-right: 0;
     border-right: none;
+  }
+
+  .onebuy img{
+  	display: grid;
+  	grid-template-columns: 1fr;
+  	width:50px;
+  	height: 50px;
+  	margin-bottom: 20px;
   }
 }
