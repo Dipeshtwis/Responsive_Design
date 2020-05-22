@@ -69,8 +69,26 @@ div,
   height: 400px;
   width: 100%;
 }
+
+.big-news,
+.small-news-1,
+.small-news-2
+{
+ background-repeat: no-repeat;
+  background-size: cover;
+  }
 .big-news {
   grid-row: 1/3;
+  background-image:linear-gradient(to right bottom,rgba(235, 76, 59, 0.9), rgba(20, 19, 33, 0.5)), url("../img/api-dev-code.png");
+}
+
+.small-news-1 {
+  background-image :url("../img/sprint_image.jpg");
+}
+
+.small-news-2 {
+	background-image :url("../img/tree-cloud.jpg");
+	background-position: bottom;
 }
 
 .Latest-news-grid {
