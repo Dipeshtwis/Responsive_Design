@@ -1,1 +1,60 @@
 @import "./reset.css";
+
+header {
+	height: 130px;
+	width: auto;
+}
+
+nav {
+	height:100px;
+	width: auto;
+}
+
+.upper-nav {
+	height: 40px;
+	background-color: #5c5251;
+}
+
+.upper-nav-left,
+.lower-nav-list {
+	float: left
+}
+
+.upper-nav-left ul li,
+.upper-nav-right ul li,
+.lower-nav-list ul li
+ {
+  display: inline-block;
+  padding: 10px 10px;
+}
+
+.upper-nav-right {
+	float: right;
+}
+
+section {
+	display: grid;
+	background-color: green;
+	height: 400px;
+	width: 1300px;
+}
+
+.Latest-news-grid {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	height: 100px;
+	width: 1300px;
+	background-color: blue;
+}
+
+.latest-title {
+	height: 50px;
+	width: auto;
+}
+.for-three-div {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	height: 600px;
+	width: 1300px;
+	background-color: red;
+}
