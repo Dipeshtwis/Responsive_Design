@@ -17,10 +17,6 @@ nav {
 header > div {
   margin-top: 100px;
 }
-div,
-.header-sec article {
-  border: 1px solid white;
-}
 
 .upper-nav {
   height: 30px;
@@ -137,18 +133,23 @@ div,
 .triangle {
 	width: 0;
 	height: 0;
-  border: 70px solid transparent;
-  border-bottom: 70px solid yellow;
+  border: 50px solid transparent;
+  border-bottom: 50px solid yellow;
   position: absolute;
-  top: -70px;
-  right: -70px;
+  top: -50px;
+  right: -50px;
   transform: rotate(45deg);
 }
 
 .triangle span {
-	text-align: center;
-	vertical-align: text-bottom;
+	display: inline-block;
+	width: 70px;
+	position: relative;
+	top: 30px;
+	right: 27px;
+	color: #000;
 	font-weight: bold;
+	font-size: 14px;
 }
 .small-news-1 {
   background-image: url("../img/sprint_image.jpg");
@@ -178,6 +179,7 @@ div,
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
   margin-bottom: 50px;
+   grid-gap:10px;
 }
 
 .aside-img {
@@ -238,6 +240,7 @@ div,
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   margin-bottom: 120px;
+   grid-gap:10px;
 }
 .news img {
   width: 100%;
@@ -367,8 +370,29 @@ div,
 }
 footer {
   width: 100%;
-  height: 100px;
-  background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
+}
+.footer-social {
+	background-color: #131313;
+}
+.footer-copyright {
+	background-color: #000;
+}
+.footer-copyright p {
+	color: white;
+	text-align: center;
+	padding:40px 0;
+}
+.footer-list {
+	text-align: center;
+}
+.footer-list li {
+	display: inline-block;
+	padding:30px 5px 10px 5px;
+}
+.footer-list li a {
+	color: white;
 }
 @media screen and (max-width: 1020px) {
   .logo {
@@ -466,5 +490,8 @@ footer {
   }
   .position-three-div {
     height: 70vw;
+  }
+  .triangle {
+  	display: none;
   }
 }
