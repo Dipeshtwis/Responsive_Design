@@ -76,9 +76,13 @@ div,
 
 .big-news,
 .small-news-1,
-.small-news-2 {
+.small-news-2,
+.three-div-background-1,
+.three-div-background-2,
+.three-div-background-3 {
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
+  background-position: center;
 }
 
 .big-news {
@@ -157,40 +161,40 @@ div,
 }
 
 .aside-img {
-	position: relative;
-	margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .aside-img img {
-	position: absolute;
-	left: 10px;
-	top: 15px;
-	width: 50px;
-	height:50px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
 }
 
 .img-head h4,
 .img-head p {
-	padding-left: 75px;
-	padding-top: 10px;
-	background-color: #ff4422;
-	font-size: 24px;
+  padding-left: 75px;
+  padding-top: 10px;
+  background-color: #ff4422;
+  font-size: 24px;
 }
 
 .img-head p {
-	padding-bottom:15px ;
-	background-color:rgba(255,68,34,.08);
-	font-weight: bold;
+  padding-bottom: 15px;
+  background-color: rgba(255, 68, 34, 0.08);
+  font-weight: bold;
 }
 .onebuy ul li:last-of-type {
-	margin-bottom: 8px;
-	padding: 7px 0;
-	border-bottom: 1px solid rgba(255,68,34,.25)
+  margin-bottom: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255, 68, 34, 0.25);
 }
 
 .onebuy p {
-	font-size: 16px;
-	line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .onebuy p span {
@@ -202,7 +206,8 @@ div,
   margin: 10px auto;
 }
 
-.latest-title p {
+.latest-title p,
+.latest-title h1 {
   font-size: 28px;
   font-weight: bold;
   color: #ff4422;
@@ -211,9 +216,9 @@ div,
 .for-three-div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 600px;
+  grid-gap: 2%;
   width: 100%;
-  background-color: red;
+  margin-bottom: 120px;
 }
 .news img {
   width: 100%;
@@ -225,12 +230,12 @@ div,
 .news a:hover {
   color: #ff4422;
 }
-.news p {
+.auther-date {
   font-size: 14px;
   color: #aaa;
   margin-top: 10px;
 }
-.news p span {
+.auther-date span {
   margin-left: 15px;
 }
 .latest-fund {
@@ -250,6 +255,96 @@ div,
 }
 .latest-fund ul li:first-of-type {
   border: none;
+}
+.position-three-div {
+  position: relative;
+  height: 20vw;
+}
+.position-three-div div {
+  position: absolute;
+  bottom: 5px;
+  color: #fff;
+  padding: 0 10px;
+}
+.position-three-div a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+.position-three-div a:hover {
+  box-shadow: inset 0 -1px 0 rgba(175, 172, 172, 0.561);
+}
+.three-div-background-1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(230, 228, 228, 0.174),
+      rgba(0, 0, 0, 0.815)
+    ),
+    url(../img/background-1.jpg);
+}
+.three-div-background-2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(230, 228, 228, 0.174),
+      rgba(0, 0, 0, 0.815)
+    ),
+    url(../img/background-2.jpeg);
+}
+.three-div-background-3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(230, 228, 228, 0.174),
+      rgba(0, 0, 0, 0.815)
+    ),
+    url(../img/background-3.png);
+}
+.three-grid-sub {
+  display: flex;
+  justify-content: space-between;
+}
+.three-grid-sub-text {
+  justify-self: left;
+  flex: 3;
+  color: #ff4422;
+  background-color: rgba(255, 68, 34, 0.08);
+  padding: 10px 2px;
+  margin-right: 5px;
+}
+.three-grid-sub-text p {
+  font-size: 16px;
+  padding: 5px;
+}
+.three-grid-sub-text a {
+  color: #ff4422;
+  font-size: 17px;
+  font-weight: bold;
+}
+.three-grid-sub-img {
+  justify-self: right;
+  flex: 1;
+}
+.three-grid-sub-img img {
+  width: 100%;
+  height: 100%;
+}
+.three-grid-sub-list li::before {
+  content: "\2022";
+  color: #ff4422;
+  font-weight: bold;
+  display: inline-block;
+}
+.three-grid-sub-list li {
+  margin-top: 10px;
+  border-bottom: 1px solid rgb(173, 173, 173);
+  padding-bottom: 10px;
+}
+.three-grid-sub-list li a {
+  color: rgb(107, 107, 107);
+  font-size: 14px;
+  line-height: 17px;
+}
+.three-grid-sub-list li a:hover {
+  color: black;
 }
 footer {
   width: 100%;
@@ -343,11 +438,14 @@ footer {
     border-right: none;
   }
 
-  .onebuy img{
-  	display: grid;
-  	grid-template-columns: 1fr;
-  	width:50px;
-  	height: 50px;
-  	margin-bottom: 20px;
+  .onebuy img {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .position-three-div {
+    height: 70vw;
   }
 }
