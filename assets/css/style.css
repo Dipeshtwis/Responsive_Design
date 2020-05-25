@@ -34,8 +34,6 @@ header > div {
   float: left;
 }
 .logo {
-  width: 40px;
-  height: 75px;
   display: none;
 }
 .search-div ul li,
@@ -89,6 +87,7 @@ header > div {
       rgba(20, 19, 33, 0.5)
     ),
     url("../img/api-dev-code.png");
+    position: relative;
 }
 
 .brand {
@@ -101,6 +100,7 @@ header > div {
 .big-news span {
   float: right;
   padding: 20px;
+  color: white;
 }
 
 .pic-detail {
@@ -111,7 +111,7 @@ header > div {
 }
 
 .pic-detail .para {
-  font-size: 52px;
+  font-size: 44px;
 }
 .para {
   font-weight: bold;
@@ -120,7 +120,7 @@ header > div {
 }
 
 .lower-para {
-  padding: 15px;
+  padding: 15px 0 15px 0;
   font-size: 18px;
   color: white;
 }
@@ -153,6 +153,7 @@ header > div {
 }
 .small-news-1 {
   background-image: url("../img/sprint_image.jpg");
+  background-position: bottom;
   position: relative;
 }
 
@@ -417,6 +418,12 @@ footer {
   svg {
     display: none;
   }
+  .big-news span {
+  display: none;
+}
+.pic-detail .para {
+  font-size: 20px;
+}
 }
 @media screen and (max-width: 780px) {
   .upper-nav-right {
@@ -427,6 +434,11 @@ footer {
   }
 }
 @media screen and (max-width: 760px) {
+	.logo {
+		display: block;
+		width: 40px;
+  height: 75px;
+	}
   .hidden-phone {
     display: none;
   }
@@ -457,6 +469,19 @@ footer {
   .news-title {
     margin-left: 20px;
   }
+
+.pic-detail {
+  width: 60%;
+  position: absolute;
+  left: 20px;
+  bottom: 5px;
+}
+.lower-para {
+  font-size: 12px;
+}
+  .pic-detail .para {
+  font-size: 18px;
+}
   .news img {
     height: 100%;
   }
