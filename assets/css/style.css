@@ -13,7 +13,6 @@ nav {
   position: fixed;
   top: 0;
   z-index: 2;
-  margin-bottom: 77px;
 }
 header > div {
   margin-top: 77px;
@@ -68,14 +67,17 @@ header > div {
   background-color: #ffdd33;
   padding: 10px;
 }
+.spacer p {
+  overflow: hidden;
+  width: 652px;
+}
 .header-sec {
   display: grid;
-  background-color: green;
   grid-template-columns: 2fr 1fr;
   height: 400px;
   width: 100%;
   position: relative;
-  /* margin-top: 113px; */
+  margin-top: 113px;
 }
 
 .big-news,
@@ -472,6 +474,9 @@ footer {
   }
   .logo-brand {
     height: 48px;
+  }
+  .header-sec {
+    margin-top: 84px;
   }
   .header-sec,
   .Latest-news-grid,
