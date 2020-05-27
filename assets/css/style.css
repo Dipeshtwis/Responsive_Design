@@ -8,19 +8,40 @@ a {
   text-decoration: none;
   color: black;
 }
-
+.logo {
+  display: inline-block;
+}
+.logo-brand {
+  display: block;
+  padding: 0 10px;
+  width: 100px;
+  height: 48px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(240, 58, 76),
+    rgba(232, 54, 19)
+  );
+}
 header,
 nav {
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 2;
+  background-color: white;
+}
+nav {
+  height: 48px;
 }
 
 header > div {
-  margin-top: 77px;
+  margin-top: 48px;
 }
-
+.header-sec,
+.Latest-news-grid,
+.for-three-div {
+  grid-template-columns: 1fr;
+}
 .upper-nav {
   height: 30px;
   background-color: black;
@@ -32,14 +53,18 @@ header > div {
   color: hsla(0, 0%, 100%, 0.6);
 }
 
-.lower-nav,
+.lower-nav {
+  color: #aaa;
+  height: 48px;
+  float: right;
+}
+.lower-nav a {
+  color: #aaa;
+}
 .list-link {
   background-color: white;
-  color: #aaa;
-  width: 100%;
-  height: 48px;
+  float: right;
 }
-
 .footer-link {
   border-radius: 50%;
   background-color: #363738;
@@ -55,7 +80,13 @@ header > div {
 .news img {
   width: 100%;
 }
-
+.news h2 {
+  font-size: 16px;
+}
+.news p {
+  font-size: 12px;
+  margin-top: 2px;
+}
 .footer-list li {
   display: inline-block;
   margin: 30px 5px 10px 5px;
@@ -133,25 +164,15 @@ header > div {
 }
 
 .latest-fund ul li {
-  float: right;
-  font-size: 18px;
-  margin-left: 10px;
+  float: none;
+  margin-left: 0;
+  padding-right: 0;
   padding-right: 10px;
   border-right: 1px solid #f42;
 }
 
 .footer-link:hover {
   background-color: black;
-}
-
-.logo,
-.upper-nav-left,
-.lower-nav-list {
-  float: left;
-}
-
-.logo {
-  display: none;
 }
 
 .upper-nav-left ul li,
@@ -166,8 +187,14 @@ header > div {
   padding: 15px 5px;
   cursor: pointer;
 }
+.search-div ul li {
+  display: inline-block;
+  border: 1px solid #aaa;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
-.search-div ul li:first-child {
+.search-div ul li {
   border: 1px solid #aaa;
   padding-right: 15px;
   padding-left: 15px;
@@ -198,11 +225,11 @@ header > div {
 
 .header-sec {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+
   height: 400px;
   width: 100%;
   position: relative;
-  margin-top: 113px;
+  margin-top: 84px;
   grid-gap: 7px;
 }
 
@@ -218,9 +245,8 @@ header > div {
 }
 
 .big-news {
-  grid-row: 1/3;
-  background-image:
-    linear-gradient(
+  grid-row: 1;
+  background-image: linear-gradient(
       to right bottom,
       rgba(235, 76, 59, 0.9),
       rgba(20, 19, 33, 0.5)
@@ -256,39 +282,20 @@ header > div {
 }
 
 .pic-detail .para {
-  font-size: 44px;
+  font-size: 18px;
 }
 
 .lower-para {
   padding: 15px 0 15px 0;
-  font-size: 18px;
+  font-size: 12px;
   color: white;
 }
 
 .news-img {
   position: relative;
 }
-
 .triangle {
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-bottom: 50px solid yellow;
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  transform: rotate(45deg);
-}
-
-.triangle span {
-  display: inline-block;
-  width: 70px;
-  position: relative;
-  top: 30px;
-  right: 27px;
-  color: #000;
-  font-weight: bold;
-  font-size: 14px;
+  display: none;
 }
 
 .small-news-1 {
@@ -308,7 +315,7 @@ header > div {
 }
 
 .for-2 .para {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .container {
@@ -318,7 +325,7 @@ header > div {
 
 .Latest-news-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
   width: 100%;
   margin-bottom: 50px;
   grid-gap: 10px;
@@ -365,7 +372,13 @@ header > div {
   padding: 7px 0;
   border-bottom: 1px solid rgba(255, 68, 34, 0.25);
 }
-
+.onebuy img {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
 .onebuy p {
   font-size: 16px;
   line-height: 1.5;
@@ -387,7 +400,7 @@ header > div {
 
 .for-three-div {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
   width: 100%;
   margin-bottom: 120px;
   grid-gap: 10px;
@@ -402,6 +415,7 @@ header > div {
 .latest-fund {
   margin-top: 10px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 100%;
   align-items: baseline;
@@ -410,10 +424,12 @@ header > div {
 .latest-fund ul li:first-of-type {
   border: none;
 }
-
+.search-div ul li:first-child {
+  margin-right: -5px;
+}
 .position-three-div {
   position: relative;
-  height: 20vw;
+  height: 70vw;
 }
 
 .position-three-div div {
@@ -424,8 +440,7 @@ header > div {
 }
 
 .three-div-background-1 {
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       to bottom,
       rgba(230, 228, 228, 0.174),
       rgba(0, 0, 0, 0.815)
@@ -434,8 +449,7 @@ header > div {
 }
 
 .three-div-background-2 {
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       to bottom,
       rgba(230, 228, 228, 0.174),
       rgba(0, 0, 0, 0.815)
@@ -444,8 +458,7 @@ header > div {
 }
 
 .three-div-background-3 {
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       to bottom,
       rgba(230, 228, 228, 0.174),
       rgba(0, 0, 0, 0.815)
@@ -512,31 +525,32 @@ footer {
 .footer-list {
   text-align: center;
 }
-
+.hidden-phone {
+  display: none;
+}
 .menu,
 .menu::before,
 .menu::after {
+  display: inline-block;
+}
+.grid-news {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+svg {
   display: none;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (min-width: 760px) {
   .logo {
     display: inline-block;
   }
-
-  .logo-brand {
+  .hidden-phone {
     display: block;
-    padding: 0 10px;
-    width: 100px;
-    height: 77px;
-    background-image:
-      linear-gradient(
-        to right bottom,
-        rgba(240, 58, 76),
-        rgba(232, 54, 19)
-      );
   }
-
+  .lower-nav {
+    float: none;
+  }
   .hidden-tablet {
     display: none;
   }
@@ -564,7 +578,9 @@ footer {
   .brand {
     display: none;
   }
-
+  .logo-brand {
+    height: 78px;
+  }
   .big-news span {
     display: none;
   }
@@ -577,69 +593,90 @@ footer {
     float: none;
     display: inline-block;
   }
-}
-
-@media screen and (max-width: 890px) {
+  header > div {
+    margin-top: 77px;
+  }
+  .grid-news {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .menu,
+  .menu::before,
+  .menu::after {
+    display: none;
+  }
+  .header-sec {
+    grid-template-columns: 2fr 1fr;
+  }
+  .big-news {
+    grid-row: 1/3;
+  }
+  .logo,
+  .upper-nav-left,
+  .lower-nav-list {
+    float: left;
+  }
   .upper-nav-right {
     display: none;
   }
-
-  .brand {
-    display: none;
+  .search-div ul li:last-child {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
   }
 }
 
-@media screen and (max-width: 760px) {
-  header > div {
-    margin-top: 48px;
+@media screen and (min-width: 880px) {
+  .upper-nav-right {
+    display: inline-block;
   }
+}
 
+@media screen and (min-width: 1020px) {
+  .upper-nav-right {
+    display: inline-block;
+  }
   .hidden-phone {
+    display: block;
+  }
+  .logo-brand {
+    height: 78px;
+  }
+  .brand {
+    display: inline-block;
+  }
+  .logo {
     display: none;
   }
 
-  .logo-brand {
-    height: 48px;
-  }
-
   .header-sec {
-    margin-top: 84px;
-  }
-
-  .header-sec,
-  .Latest-news-grid,
-  .for-three-div {
-    grid-template-columns: 1fr;
+    margin-top: 113px;
   }
 
   .Latest-news-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .for-three-div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Latest-news-grid {
     margin-bottom: 70px;
-  }
-
-  .big-news {
-    grid-row: 1;
-  }
-
-  .search-div ul li {
-    display: inline-block;
-    border: 1px solid #aaa;
-    padding-right: 15px;
-    padding-left: 15px;
   }
 
   .menu,
   .menu::before,
   .menu::after {
-    display: inline-block;
-  }
-
-  svg {
     display: none;
+  }
+  svg {
+    display: static;
   }
 
   .grid-news {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr;
   }
 
   .news-title {
@@ -647,35 +684,28 @@ footer {
   }
 
   .pic-detail {
-    width: 60%;
+    width: 100%;
     position: absolute;
     left: 20px;
     bottom: 5px;
   }
 
   .lower-para {
-    font-size: 12px;
-  }
-
-  .pic-detail .para {
     font-size: 18px;
   }
 
+  .pic-detail .para {
+    font-size: 44px;
+  }
+  .for-2 .para {
+    font-size: 24px;
+  }
   .search-div {
     float: right;
   }
 
   .news img {
     height: 100%;
-  }
-
-  .news h2 {
-    font-size: 16px;
-  }
-
-  .news p {
-    font-size: 12px;
-    margin-top: 2px;
   }
 
   .latest-fund {
@@ -687,14 +717,11 @@ footer {
   }
 
   .latest-fund ul li {
-    float: none;
-    margin-left: 0;
-    padding-right: 0;
-    border-right: none;
-  }
+    float: right;
+    font-size: 18px;
+    margin-left: 10px;
 
-  .search-div ul li:first-child {
-    margin-right: -5px;
+    border-right: none;
   }
 
   .onebuy img {
@@ -706,10 +733,32 @@ footer {
   }
 
   .position-three-div {
-    height: 70vw;
+    height: 20vw;
   }
 
   .triangle {
-    display: none;
+    width: 0;
+    height: 0;
+    display: static;
+    border: 50px solid transparent;
+    border-bottom: 50px solid yellow;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    transform: rotate(45deg);
+  }
+
+  .triangle span {
+    display: inline-block;
+    width: 70px;
+    position: relative;
+    top: 30px;
+    right: 27px;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .hidden-tablet {
+    display: inline-block;
   }
 }
