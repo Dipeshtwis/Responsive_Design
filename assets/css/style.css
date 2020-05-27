@@ -8,20 +8,24 @@ a {
   text-decoration: none;
   color: black;
 }
+
 .logo {
   display: inline-block;
 }
+
 .logo-brand {
   display: block;
   padding: 0 10px;
   width: 100px;
   height: 48px;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(240, 58, 76),
-    rgba(232, 54, 19)
-  );
+  background-image:
+    linear-gradient(
+      to right bottom,
+      rgba(240, 58, 76),
+      rgba(232, 54, 19)
+    );
 }
+
 header,
 nav {
   width: 100%;
@@ -30,6 +34,7 @@ nav {
   z-index: 2;
   background-color: white;
 }
+
 nav {
   height: 48px;
 }
@@ -37,11 +42,13 @@ nav {
 header > div {
   margin-top: 48px;
 }
+
 .header-sec,
 .Latest-news-grid,
 .for-three-div {
   grid-template-columns: 1fr;
 }
+
 .upper-nav {
   height: 30px;
   background-color: black;
@@ -58,13 +65,16 @@ header > div {
   height: 48px;
   float: right;
 }
+
 .lower-nav a {
   color: #aaa;
 }
+
 .list-link {
   background-color: white;
   float: right;
 }
+
 .footer-link {
   border-radius: 50%;
   background-color: #363738;
@@ -80,13 +90,16 @@ header > div {
 .news img {
   width: 100%;
 }
+
 .news h2 {
   font-size: 16px;
 }
+
 .news p {
   font-size: 12px;
   margin-top: 2px;
 }
+
 .footer-list li {
   display: inline-block;
   margin: 30px 5px 10px 5px;
@@ -187,14 +200,9 @@ header > div {
   padding: 15px 5px;
   cursor: pointer;
 }
-.search-div ul li {
-  display: inline-block;
-  border: 1px solid #aaa;
-  padding-right: 15px;
-  padding-left: 15px;
-}
 
 .search-div ul li {
+  display: inline-block;
   border: 1px solid #aaa;
   padding-right: 15px;
   padding-left: 15px;
@@ -225,7 +233,6 @@ header > div {
 
 .header-sec {
   display: grid;
-
   height: 400px;
   width: 100%;
   position: relative;
@@ -246,7 +253,8 @@ header > div {
 
 .big-news {
   grid-row: 1;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to right bottom,
       rgba(235, 76, 59, 0.9),
       rgba(20, 19, 33, 0.5)
@@ -294,6 +302,7 @@ header > div {
 .news-img {
   position: relative;
 }
+
 .triangle {
   display: none;
 }
@@ -325,10 +334,13 @@ header > div {
 
 .Latest-news-grid {
   display: grid;
-
   width: 100%;
   margin-bottom: 50px;
   grid-gap: 10px;
+}
+
+.news-title {
+  margin-left: 20px;
 }
 
 .aside-img {
@@ -347,6 +359,14 @@ header > div {
 .three-grid-sub-img img {
   width: 100%;
   height: 100%;
+}
+
+.onebuy img {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
 }
 
 .news-img > a > img {
@@ -372,13 +392,7 @@ header > div {
   padding: 7px 0;
   border-bottom: 1px solid rgba(255, 68, 34, 0.25);
 }
-.onebuy img {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
-}
+
 .onebuy p {
   font-size: 16px;
   line-height: 1.5;
@@ -400,7 +414,6 @@ header > div {
 
 .for-three-div {
   display: grid;
-
   width: 100%;
   margin-bottom: 120px;
   grid-gap: 10px;
@@ -424,9 +437,11 @@ header > div {
 .latest-fund ul li:first-of-type {
   border: none;
 }
+
 .search-div ul li:first-child {
   margin-right: -5px;
 }
+
 .position-three-div {
   position: relative;
   height: 70vw;
@@ -440,7 +455,8 @@ header > div {
 }
 
 .three-div-background-1 {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to bottom,
       rgba(230, 228, 228, 0.174),
       rgba(0, 0, 0, 0.815)
@@ -449,7 +465,8 @@ header > div {
 }
 
 .three-div-background-2 {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to bottom,
       rgba(230, 228, 228, 0.174),
       rgba(0, 0, 0, 0.815)
@@ -458,7 +475,8 @@ header > div {
 }
 
 .three-div-background-3 {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to bottom,
       rgba(230, 228, 228, 0.174),
       rgba(0, 0, 0, 0.815)
@@ -525,18 +543,22 @@ footer {
 .footer-list {
   text-align: center;
 }
+
 .hidden-phone {
   display: none;
 }
+
 .menu,
 .menu::before,
 .menu::after {
   display: inline-block;
 }
+
 .grid-news {
   display: grid;
   grid-template-columns: 1fr 6fr;
 }
+
 svg {
   display: none;
 }
@@ -545,12 +567,15 @@ svg {
   .logo {
     display: inline-block;
   }
+
   .hidden-phone {
     display: block;
   }
+
   .lower-nav {
     float: none;
   }
+
   .hidden-tablet {
     display: none;
   }
@@ -578,9 +603,11 @@ svg {
   .brand {
     display: none;
   }
+
   .logo-brand {
     height: 78px;
   }
+
   .big-news span {
     display: none;
   }
@@ -593,32 +620,40 @@ svg {
     float: none;
     display: inline-block;
   }
+
   header > div {
     margin-top: 77px;
   }
+
   .grid-news {
     display: grid;
     grid-template-columns: 1fr;
   }
+
   .menu,
   .menu::before,
   .menu::after {
     display: none;
   }
+
   .header-sec {
     grid-template-columns: 2fr 1fr;
   }
+
   .big-news {
     grid-row: 1/3;
   }
+
   .logo,
   .upper-nav-left,
   .lower-nav-list {
     float: left;
   }
+
   .upper-nav-right {
     display: none;
   }
+
   .search-div ul li:last-child {
     border: 0;
     padding-right: 0;
@@ -637,15 +672,19 @@ svg {
   .upper-nav-right {
     display: inline-block;
   }
+
   .hidden-phone {
     display: block;
   }
+
   .logo-brand {
     height: 78px;
   }
+
   .brand {
     display: inline-block;
   }
+
   .logo {
     display: none;
   }
@@ -656,13 +695,11 @@ svg {
 
   .Latest-news-grid {
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 70px;
   }
 
   .for-three-div {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .Latest-news-grid {
-    margin-bottom: 70px;
   }
 
   .menu,
@@ -670,6 +707,7 @@ svg {
   .menu::after {
     display: none;
   }
+
   svg {
     display: static;
   }
@@ -680,7 +718,7 @@ svg {
   }
 
   .news-title {
-    margin-left: 20px;
+    margin-left: 0;
   }
 
   .pic-detail {
@@ -697,9 +735,11 @@ svg {
   .pic-detail .para {
     font-size: 44px;
   }
+
   .for-2 .para {
     font-size: 24px;
   }
+
   .search-div {
     float: right;
   }
@@ -720,7 +760,6 @@ svg {
     float: right;
     font-size: 18px;
     margin-left: 10px;
-
     border-right: none;
   }
 
@@ -758,6 +797,7 @@ svg {
     font-weight: bold;
     font-size: 14px;
   }
+
   .hidden-tablet {
     display: inline-block;
   }
